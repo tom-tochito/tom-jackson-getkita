@@ -30,6 +30,7 @@
   align-items: center;
   margin-left: auto;
   gap: 4px;
+  position: relative;
 }
 
 .menuIcon {
@@ -56,7 +57,7 @@
 .popupMenu {
   position: absolute;
   left: 100%;
-  top: 0;
+  top: -4px;
   background: #2d2d2d;
   border-radius: 4px;
   padding: 4px;
@@ -66,6 +67,8 @@
 }
 
 .menuItem {
+  display: flex;
+  align-items: center;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
@@ -74,4 +77,27 @@
 
 .menuItem:hover {
   background: #3d3d3d;
-} 
+}
+
+.createNewContainer {
+  position: relative;
+  width: 100%;
+}
+
+.createNewButton {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #4B8BF4;
+  background: transparent;
+}
+
+.createNewButton:hover {
+  background: #2d2d2d;
+}
+
+.menuItemIcon {
+  margin-right: 8px;
+}
+ 
