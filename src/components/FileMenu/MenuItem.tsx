@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MenuItemType } from './types';
 import styles from './MenuItem.module.css';
-import { ChevronRight, MoreHorizontal, Plus, FileText, FolderPlus, File } from 'lucide-react';
+import { ChevronRight, MoreHorizontal, Plus, FileText, FolderPlus, File, Pencil, Trash2, Link, Copy } from 'lucide-react';
 
 interface MenuItemProps {
   item: MenuItemType;
@@ -79,9 +79,22 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, depth = 0 }) => {
               />
               {showMenu && (
                 <div className={styles.popupMenu}>
-                  <div className={styles.menuItem}>Rename</div>
-                  <div className={styles.menuItem}>Delete</div>
-                  <div className={styles.menuItem}>Copy link</div>
+                  <div className={styles.menuItem}>
+                    <Pencil size={16} className={`${styles.menuItemIcon} ${styles.editIcon}`} />
+                    Rename
+                  </div>
+                  <div className={styles.menuItem}>
+                    <Copy size={16} className={`${styles.menuItemIcon} ${styles.copyIcon}`} />
+                    Copy path
+                  </div>
+                  <div className={styles.menuItem}>
+                    <Link size={16} className={`${styles.menuItemIcon} ${styles.linkIcon}`} />
+                    Copy link
+                  </div>
+                  <div className={styles.menuItem}>
+                    <Trash2 size={16} className={`${styles.menuItemIcon} ${styles.deleteIcon}`} />
+                    Delete
+                  </div>
                 </div>
               )}
             </div>
@@ -109,22 +122,26 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, depth = 0 }) => {
                 onClick={handleCreateClick}
                 style={{ paddingLeft: `${(depth + 1) * 1.5}rem` }}
               >
-                <Plus size={16} className={styles.icon} />
+                <Plus size={16} className={styles.createIcon} />
                 Create new lesson
               </div>
               {showCreateMenu && (
                 <div className={styles.popupMenu}>
                   <div className={styles.menuItem}>
-                    <FileText size={16} className={styles.menuItemIcon} />
+                    <FileText size={16} className={`${styles.menuItemIcon} ${styles.textFileIcon}`} />
                     Add text file
                   </div>
                   <div className={styles.menuItem}>
-                    <File size={16} className={styles.menuItemIcon} />
+                    <File size={16} className={`${styles.menuItemIcon} ${styles.codeFileIcon}`} />
                     Add code file
                   </div>
                   <div className={styles.menuItem}>
-                    <FolderPlus size={16} className={styles.menuItemIcon} />
+                    <FolderPlus size={16} className={`${styles.menuItemIcon} ${styles.folderIcon}`} />
                     Add folder
+                  </div>
+                  <div className={styles.menuItem}>
+                    <File size={16} className={`${styles.menuItemIcon} ${styles.fileIcon}`} />
+                    Add file
                   </div>
                 </div>
               )}

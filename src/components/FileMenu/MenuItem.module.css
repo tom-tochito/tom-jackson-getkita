@@ -59,10 +59,10 @@
   left: 100%;
   top: -4px;
   background: #2d2d2d;
-  border-radius: 4px;
-  padding: 4px;
-  min-width: 150px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
 
@@ -73,6 +73,9 @@
   cursor: pointer;
   border-radius: 4px;
   text-align: left;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  color: #fff;
 }
 
 .menuItem:hover {
@@ -82,6 +85,7 @@
 .createNewContainer {
   position: relative;
   width: 100%;
+  margin-top: 4px;
 }
 
 .createNewButton {
@@ -91,13 +95,58 @@
   cursor: pointer;
   color: #4B8BF4;
   background: transparent;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
 .createNewButton:hover {
   background: #2d2d2d;
 }
 
+.createIcon {
+  margin-right: 8px;
+  stroke-width: 2.5px;
+  color: #4B8BF4;
+}
+
 .menuItemIcon {
   margin-right: 8px;
+  stroke-width: 2px;
+  flex-shrink: 0;
+}
+
+/* Icon-specific colors */
+.textFileIcon {
+  color: #64D16A;  /* Green */
+}
+
+.codeFileIcon {
+  color: #4B8BF4;  /* Blue */
+}
+
+.folderIcon {
+  color: #FFB454;  /* Orange/Yellow */
+}
+
+.fileIcon {
+  color: #9B9B9B;  /* Gray */
+}
+
+/* Add these new icon-specific colors */
+.editIcon {
+  color: #4B8BF4;  /* Blue */
+}
+
+.copyIcon {
+  color: #64D16A;  /* Green */
+}
+
+.linkIcon {
+  color: #FFB454;  /* Orange/Yellow */
+}
+
+.deleteIcon {
+  color: #FF5F56;  /* Red */
 }
  
