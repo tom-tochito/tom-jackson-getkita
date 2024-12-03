@@ -1,6 +1,6 @@
 import { FileMenu } from './components/FileMenu/FileMenu';
 import { MenuItemType } from './components/FileMenu/types';
-import { FileText, Globe, Code, BookOpen } from 'lucide-react';
+import { FileText, Globe, Code } from 'lucide-react';
 
 const menuItems: MenuItemType[] = [
   {
