@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.content:hover {
+  background: #2d2d2d;
+}
+
+.content.active {
+  background: #2d2d2d;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #64D16A;
+}
+
+.expandIcon {
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.expandIcon.open {
+  transform: rotate(90deg);
+} 
