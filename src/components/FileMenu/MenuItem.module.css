@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  position: relative;
 }
 
 .content {
@@ -24,6 +25,24 @@
   color: #64D16A;
 }
 
+.rightIcons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 4px;
+}
+
+.menuIcon {
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.menuIcon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .expandIcon {
   margin-left: auto;
   transform: rotate(0deg);
@@ -32,4 +51,27 @@
 
 .expandIcon.open {
   transform: rotate(90deg);
+}
+
+.popupMenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #2d2d2d;
+  border-radius: 4px;
+  padding: 4px;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.menuItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: #3d3d3d;
 } 
